@@ -2,8 +2,15 @@
 
 import React from "react";
 import { render } from "react-dom";
+import "./style.less";
 
 import Switch from "./ios/Switch.jsx";
+import Button from "./ios/Button.jsx";
 
-render(<Switch />, document.getElementById("container"));
+render((
+    <div>
+        <Switch />
+        <Button />
+    </div>
+), document.getElementById("container"));
 

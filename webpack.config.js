@@ -13,16 +13,6 @@ module.exports = {
     },
     module: {
         loaders: [
-            {
-                loader: "babel-loader",
-                include: [
-                    path.resolve(__dirname, "src")
-                ],
-                test: /\.jsx?$/,
-                query: {
-                    plugins: ['transform-runtime'],
-                }
-            },
             //tell webpack to use jsx-loader for all *.jsx files
             {
                 test: /\.jsx?$/,
@@ -31,13 +21,19 @@ module.exports = {
                 query: {
                     presets: ['react', 'es2015']
                 }
+            },
+            // LESS
+            {
+                test: /\.less$/,
+                loader: 'style!css!less!autoprefixer-loader'
             }
         ]
     },
     externals: {
         //don't bundle the 'react' npm package with our bundle.js
         //but get it from a global 'React' variable
-        //'react': 'React'
+        'react': 'React',
+        'react-dom': 'ReactDOM'
     },
     resolve: {
         extensions: ['', '.js', '.jsx'],

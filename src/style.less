@@ -1,0 +1,41 @@
+html, body {
+    //background-color: #d73300;
+}
+
+.ios {
+    &.ios-button {
+        position: relative;
+        display: inline-block;
+        box-sizing: border-box;
+        background-clip: padding-box;
+        margin: 0;
+        font: inherit;
+        font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-weight: 400;
+        font-size: 17px;
+        cursor: default;
+        user-select: none;;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        height: auto;
+        text-decoration: none;
+        padding: 4px 10px;
+        line-height: 32px;
+        letter-spacing: 0;
+        color: #fff;
+        vertical-align: middle;
+        background-color: rgba(24, 103, 194, 0.81);
+        border: 0 solid currentColor;
+        border-radius: 3px;
+        transition: none;
+        &:focus {
+            outline: none;
+        }
+        &:active {
+            opacity: 0.3;
+        }
+    }
+}
