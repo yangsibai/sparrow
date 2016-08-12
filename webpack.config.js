@@ -3,7 +3,7 @@ var path = require('path');
 // http://jslog.com/2014/10/02/react-with-webpack-part-1/
 module.exports = {
     entry: [
-        "babel-polyfill",
+        //"babel-polyfill",
         "./src/lib.js"
     ],
     output: {
@@ -38,5 +38,6 @@ module.exports = {
     resolve: {
         extensions: ['', '.js', '.jsx'],
         root: [path.join(__dirname, 'src')]
-    }
+    },
+    plugins: []
 };
